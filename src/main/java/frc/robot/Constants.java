@@ -8,6 +8,7 @@
 package frc.robot;
 
 import edu.wpi.cscore.VideoProperty;
+import frc.robot.valuetuner.WebConstant;
 
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
@@ -21,9 +22,9 @@ public final class Constants {
 
     public static final class Shooter {
         public static final int TALON_TIMEOUT = 10;
-        public static final double KP = 0;
-        public static final double KI = 0;
-        public static final double KD = 0;
+        public static final WebConstant KP = new WebConstant("KP", 0);
+        public static final WebConstant KI = new WebConstant("KI", 0);
+        public static final WebConstant KD = new WebConstant("KD", 0);
     }
 
 }

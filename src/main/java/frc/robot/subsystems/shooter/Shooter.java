@@ -19,9 +19,9 @@ public class Shooter extends SubsystemBase {
 
         master.setSensorPhase(Ports.Shooter.IS_SENSOR_PHASE_INVERTED);
 
-        master.config_kP(0, Constants.Shooter.KP, Constants.Shooter.TALON_TIMEOUT);
-        master.config_kI(0, Constants.Shooter.KI, Constants.Shooter.TALON_TIMEOUT);
-        master.config_kD(0, Constants.Shooter.KD, Constants.Shooter.TALON_TIMEOUT);
+        master.config_kP(0, Constants.Shooter.KP.get(), Constants.Shooter.TALON_TIMEOUT);
+        master.config_kI(0, Constants.Shooter.KI.get(), Constants.Shooter.TALON_TIMEOUT);
+        master.config_kD(0, Constants.Shooter.KD.get(), Constants.Shooter.TALON_TIMEOUT);
     }
 
     public void setVelocity(double velocity) {
