@@ -2,11 +2,13 @@ package frc.robot.subsystems.shooter.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.subsystems.shooter.Shooter;
+import frc.robot.valuetuner.WebConstant;
+import webapp.FireLog;
 
 public class Shoot extends CommandBase {
 
-    private Shooter shooter;
-    public double vel = 0;
+    private final Shooter shooter;
+    public WebConstant vel = new WebConstant("velocity-shooter", 0);
 
     public Shoot(Shooter shooter) {
         this.shooter = shooter;
@@ -19,7 +21,9 @@ public class Shoot extends CommandBase {
 
     @Override
     public void execute() {
-        shooter.setVelocity(vel);
+        shooter.setVelocity(vel.get());
+        FireLog.log("setpoint", vel.get());
+        FireLog.log("velocity", shooter.getVelocity());
     }
 
     @Override
