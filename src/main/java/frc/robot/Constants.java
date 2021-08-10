@@ -7,6 +7,8 @@
 
 package frc.robot;
 
+import edu.wpi.cscore.VideoProperty;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants.  This class should not be used for any other purpose.  All constants should be
@@ -16,4 +18,12 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
+
+    public static final class Shooter {
+        public static final int TALON_TIMEOUT = 10;
+        public static final double KP = 0;
+        public static final double KI = 0;
+        public static final double KD = 0;
+    }
+
 }
